@@ -16,7 +16,7 @@ module.exports = function createDreamTeam(arr) {
     });
     str = str.toUpperCase();
     str = str.split('').sort().join('');
-    
+
     return str;
   } else {
     return false;
