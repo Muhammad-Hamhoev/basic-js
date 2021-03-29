@@ -6,13 +6,10 @@ module.exports = function createDreamTeam(arr) {
 
   if (Array.isArray(arr)) {
     arr.forEach(el => {
-
-
       if (typeof (el) == 'string') {
         el = el.trim()
         str += el[0];
       }
-
     });
     str = str.toUpperCase();
     str = str.split('').sort().join('');

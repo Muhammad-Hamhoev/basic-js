@@ -4,6 +4,7 @@ module.exports = function transform(arr) {
   if(!Array.isArray(arr)) {
     throw new Error();
   }
+
   const newArr = [] 
 
   for(let i = 0; i< arr.length; i++){
@@ -13,6 +14,10 @@ module.exports = function transform(arr) {
     }else if(arr[i] == "--double-prev"){
       if(arr[i] != 0){
         newArr.push(arr[i-1])
+      }
+    }else if(arr[i] == "--discard-next" && arr[i+2] == "--double-prev"){
+      if(arr[i] != arr.length-1){
+        i +=2
       }
     }else if(arr[i] == "--discard-next"){
       if(arr[i] != arr.length-1){
